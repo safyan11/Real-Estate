@@ -107,3 +107,7 @@ animate-round */
 .mobile-nav-link.active {
   @apply bg-blue-100 text-blue-600;
 }
+
+/* .html {
+  scroll-behavior: smooth;
+} */
