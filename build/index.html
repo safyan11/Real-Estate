@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  
+    <title>Real Estate</title>
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+ 
+  </head>
+<body >
+<!-- nav+ hero section  -->
+<section class="h-[100%] bg-cover" style="background-image:url(./img/herobg.png);">
+    <!-- navbar code  -->
+    <nav class=" top-0  shadow-sm">
+      <div class=" px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center w-full">
+          <!-- Logo -->
+          <div class="flex items-center w-[20%]">
+            <img src="https://img.icons8.com/ios-filled/50/000000/home.png" class="w-6 h-6 mr-2" alt="logo"/>
+            <span class="text-xl font-semibold text-gray-800">homez</span>
+          </div>
+  
+          <!-- Toggle Button for Mobile -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+  
+          <!-- Nav Menu -->
+          <div class="hidden md:flex items-center justify-between w-[80%] ">
+            <!-- Nav Items -->
+            <div class="flex items-center xl:space-x-20 lg:space-x-10 space-x-2">
+              <a href="#" class="lg:text-sm text-xs  font-medium text-gray-700  hover:text-blue-600  hover:bg-blue-100 rounded-full px-3 py-1">Home</a>
+              <div class="relative group">
+                <a href="#" class="lg:text-sm text-xs text-gray-700  hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full font-medium flex items-center gap-1">Listings
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.23 7.21L10 11.99l4.77-4.78 1.06 1.06L10 14.1 4.17 8.27l1.06-1.06z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="relative group">
+                <a href="#" class="lg:text-sm text-xs text-gray-700  hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full font-medium flex items-center gap-1">Members
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.23 7.21L10 11.99l4.77-4.78 1.06 1.06L10 14.1 4.17 8.27l1.06-1.06z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="relative group">
+                <a href="#" class="lg:text-sm text-xs text-gray-700  hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full font-medium flex items-center gap-1">Blog
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.23 7.21L10 11.99l4.77-4.78 1.06 1.06L10 14.1 4.17 8.27l1.06-1.06z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="relative group">
+                <a href="#" class="lg:text-sm text-xs text-gray-700  hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full font-medium flex items-center gap-1">Pages
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.23 7.21L10 11.99l4.77-4.78 1.06 1.06L10 14.1 4.17 8.27l1.06-1.06z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+  
+            <!-- Right Buttons -->
+            <div class="flex items-center space-x-4 ml-4">
+              <a href="#" class="lg:text-sm text-xs text-black hover:text-blue-600">Login / Register</a>
+              <a href="#" class="border border-gray-800 rounded-full lg:px-4 px-5 py-1 lg:text-sm text-xs font-medium hover:bg-gray-800 hover:text-white transition-all">
+                Add Property
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+        <a href="#" class="block text-sm font-medium text-gray-700 hover:text-blue-600  hover:bg-blue-100 rounded px-3 py-1">Home</a>
+        <a href="#" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full ">Listings</a>
+        <a href="#" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Members</a>
+        <a href="#" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Blog</a>
+        <a href="#" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Pages</a>
+        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Login / Register</a>
+        <a href="#" class="block text-center border border-gray-800 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-800 hover:text-white transition">
+          Add Property
+        </a>
+      </div>
+    </nav>
+
+    <!-- hero section  -->
+ 
+
+    <div class=" w-full lg:px-36 px-6 relative z-10 flex flex-col lg:flex-row justify-center items-center gap-10 py-28">
+      
+      <!-- Left Text -->
+      <div class="text-center lg:text-left w-1/2">
+        <p class="text-sm text-black uppercase tracking-widest mb-2">The best way to</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-black leading-tight mb-4">Find your happy</h1>
+        <a href="#" class="inline-block text-sm text-black  transition">
+          Search properties for sale and to rent in the UK
+        </a>
+      </div>
+
+      <!-- Right Search Box -->
+      <div class="bg-white    rounded-xl shadow-lg p-6 ">
+        <!-- Tabs -->
+        <div class="flex space-x-2 mb-4">
+          <button class="tab-btn text-sm px-3 py-1 rounded-full" data-tab="all">All</button>
+          <button class="tab-btn text-sm px-3 py-1 rounded-full" data-tab="sale">For Sale</button>
+          <button class="tab-btn text-sm px-3 py-1 rounded-full" data-tab="rent">For Rent</button>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-4 space-x-2 ">
+          <select id="propertyType" class="w-full px-4 py-2 border rounded-md text-sm text-gray-600">
+            <option>Property Type</option>
+            <option>House</option>
+            <option>Apartment</option>
+          </select>
+          
+          <select id="location" class="w-full px-4 py-2 border rounded-md text-sm text-gray-600">
+            <option>Location</option>
+            <option>London</option>
+            <option>Manchester</option>
+          </select>
+
+          <div class="flex items-center justify-between space-x-2">
+            <input id="minPrice" type="text" placeholder="$0" class="w-1/2 px-4 py-2 border rounded-md text-sm text-gray-600" />
+            <input id="maxPrice" type="text" placeholder="$5000" class="w-1/2 px-4 py-2 border rounded-md text-sm text-gray-600" />
+          </div>
+
+          <!-- Advanced -->
+          <div class="text-sm text-gray-600 underline cursor-pointer hover:text-blue-600">Advanced</div>
+
+          <!-- Search Button -->
+          <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800 transition">Search</button>
+        </form>
+      </div>
+    </div>
+</section>
+
+  <!-- slider section  -->
+  <section>
+    <div class="overflow-hidden py-6 bg-black">
+      <h1 class="text-lg text-white text-center py-10">Trusted by the world’s best</h1>
+      <div class="flex  animate-scroll space-x-32  items-center">
+
+
+        <!-- Replace src with your logos -->
+        <img src="./img/AMAZON.png" alt="ebay" class="h-6" />
+        <img src="./img/ad.png" alt="amazon" class="h-6" />
+        <img src="./img/cisco.png" alt="ajio" class="h-6" />
+        <img src="./img/dropcam.png" alt="ebay" class="h-6" />
+        <img src="./img/logical.png" alt="amazon" class="h-6" />
+        <img src="./img/spotify.png" alt="ajio" class="h-6" />
+  
+        <!-- Repeat logos for seamless loop -->
+        <img src="./img/AMAZON.png" alt="ebay" class="h-6" />
+        <img src="./img/ad.png" alt="amazon" class="h-6" />
+        <img src="./img/cisco.png" alt="ajio" class="h-6" />
+        <img src="./img/dropcam.png" alt="ebay" class="h-6" />
+        <img src="./img/logical.png" alt="amazon" class="h-6" />
+        <img src="./img/spotify.png" alt="ajio" class="h-6" />
+        <!-- again repeted  -->
+        <img src="./img/AMAZON.png" alt="ebay" class="h-6" />
+        <img src="./img/ad.png" alt="amazon" class="h-6" />
+        <img src="./img/cisco.png" alt="ajio" class="h-6" />
+        <img src="./img/dropcam.png" alt="ebay" class="h-6" />
+        <img src="./img/logical.png" alt="amazon" class="h-6" />
+        <img src="./img/spotify.png" alt="ajio" class="h-6" />
+      </div>
+      </div>
+    </div>
+  
+   </section>
+
+<!-- discover our future  -->
+<section class="px-4 sm:px-6 lg:px-10 py-10">
+  <!-- Heading Row -->
+  <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 py-10">
+    <div>
+      <h1 class="text-[#181A20] text-2xl sm:text-3xl font-semibold">Discover Our Featured Listings</h1>
+      <p class="text-sm text-[#717171] font-normal">Aliquam lacinia diam quis lacus euismod</p>
+    </div>
+    <div>
+      <p class="text-black text-sm sm:text-base cursor-pointer">
+        See All Properties 
+        <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i>
+      </p>
+    </div>
+  </div>
+
+  <!-- Card Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+    <!-- card1 -->
+    <div class="flex flex-col justify-between items-start bg-cover h-96 px-6 py-6 rounded-xl" style="background-image: url(./img/dicover1.png);">
+      <div>
+        <button class="text-white bg-[#EB6753] rounded-md px-4 py-2">Featured</button>
+      </div>
+      <div>
+        <h1 class="text-white font-semibold text-sm">$4,600</h1>
+        <h1 class="text-white font-semibold text-sm pt-3">House on the Hollywood</h1>
+        <div class="flex flex-wrap items-center gap-4 pt-5">
+          <h1 class="text-white font-semibold text-sm">6 Beds</h1>
+          <h1 class="text-white font-semibold text-sm">2 Baths</h1>
+          <h1 class="text-white font-semibold text-sm">200 sqft</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="flex flex-col justify-between items-start bg-cover h-96 px-6 py-6 rounded-xl" style="background-image: url(./img/discover2.png);">
+      <div>
+        <button class="text-white bg-[#EB6753] rounded-md px-4 py-2">Featured</button>
+      </div>
+      <div>
+        <h1 class="text-white font-semibold text-sm">$5,800</h1>
+        <h1 class="text-white font-semibold text-sm pt-3">Comfortable Villa Green</h1>
+        <div class="flex flex-wrap items-center gap-4 pt-5">
+          <h1 class="text-white font-semibold text-sm">9 Beds</h1>
+          <h1 class="text-white font-semibold text-sm">3 Baths</h1>
+          <h1 class="text-white font-semibold text-sm">600 sqft</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="flex flex-col justify-between items-start bg-cover h-96 px-6 py-6 rounded-xl" style="background-image: url(./img/discover3.png);">
+      <div>
+        <button class="text-white bg-[#EB6753] rounded-md px-4 py-2">Featured</button>
+      </div>
+      <div>
+        <h1 class="text-white font-semibold text-sm">$2,500</h1>
+        <h1 class="text-white font-semibold text-sm pt-3">Quality House For Sale</h1>
+        <div class="flex flex-wrap items-center gap-4 pt-5">
+          <h1 class="text-white font-semibold text-sm">10 Beds</h1>
+          <h1 class="text-white font-semibold text-sm">2 Baths</h1>
+          <h1 class="text-white font-semibold text-sm">500 sqft</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- card4 -->
+    <div class="flex flex-col justify-between items-start bg-cover h-96 px-6 py-6 rounded-xl" style="background-image: url(./img/discover4.png);">
+      <div>
+        <button class="text-white bg-[#EB6753] rounded-md px-4 py-2">Featured</button>
+      </div>
+      <div>
+        <h1 class="text-white font-semibold text-sm">$4,500</h1>
+        <h1 class="text-white font-semibold text-sm pt-3">Diamond Family Home</h1>
+        <div class="flex flex-wrap items-center gap-4 pt-5">
+          <h1 class="text-white font-semibold text-sm">4 Beds</h1>
+          <h1 class="text-white font-semibold text-sm">2 Baths</h1>
+          <h1 class="text-white font-semibold text-sm">300 sqft</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- featured homes  -->
+<section class="px-4 sm:px-6 lg:px-32 py-10">
+  <!-- Heading Row -->
+  <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 py-10">
+    <div>
+      <h1 class="text-[#181A20] text-2xl sm:text-3xl font-semibold">Featured Homes</h1>
+      <p class="text-sm text-[#717171] font-normal">Aliquam lacinia diam quis lacus euismod</p>
+    </div>
+    <div>
+      <p class="text-black text-sm sm:text-base cursor-pointer">
+        All Types 
+        <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i>
+      </p>
+    </div>
+  </div>
+
+  <!-- Card Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+    <!-- card1 -->
+    <div class="flex flex-col  items-center text-center bg-cover h-80  px-6 py-6 rounded-xl" style="background-image: url(./img/feature\ 1.png);">
+     <div class="">
+      <h1 class="text-sm text-[#181A20] font-semibold ">Apartments for sale</h1>
+      <p class="text-xs text-[#181A20]">
+        3 Properties
+      </p>
+     </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="flex flex-col  items-center text-center bg-cover h-80  px-6 py-6 rounded-xl" style="background-image: url(./img/feature2.png);">
+      <div class="">
+       <h1 class="text-sm text-[#181A20] font-semibold ">Single family homes for sale</h1>
+       <p class="text-xs text-[#181A20]">
+         3 Properties
+       </p>
+      </div>
+     </div>
+
+    <!-- card3 -->
+    <div class="flex flex-col  items-center text-center bg-cover h-80  px-6 py-6 rounded-xl" style="background-image: url(./img/feature3.png);">
+      <div class="">
+       <h1 class="text-sm font-semibold text-[#181A20] ">Office for sale</h1>
+       <p class="text-xs text-[#181A20]">
+         3 Properties
+       </p>
+      </div>
+     </div>
+
+    <!-- card4 -->
+    <div class="flex flex-col  items-center text-center bg-cover h-80  px-6 py-6 rounded-xl" style="background-image: url(./img/feature4.png);">
+      <div class="">
+       <h1 class="text-sm font-semibold text-[#181A20] ">Villas for sale</h1>
+       <p class="text-xs text-[#181A20]">
+         3 Properties
+       </p>
+      </div>
+     </div>
+  </div>
+</section>
+
+<!-- lests find right selling  -->
+<section class=" px-6 lg:p-10 py-12   gap-8 bg-cover " style="background-image: url(./img/sectionbg.png);">
+    
+  <!-- Left Side (Text + Cards) -->
+
+    <div class="pl-28">
+      <h2 class="text-2xl font-bold mb-3">Let's find the right selling <br> option for you</h2>
+      <p class="text-gray-500 mb-8 text-xs">Aliquam tristique diam quis lacus iaculis euismod</p>
+    </div>
+      <div class="bg-white  shadow-md rounded-2xl overflow-hidden flex flex-col md:flex-row justify-center items-center">
+        
+        <!-- Card 1 -->
+        <div class="flex-1 p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+              <img src="./img/Vector1.png" alt="">
+            </div>
+          </div>
+          <h3 class="font-semibold text-gray-800">Property Management</h3>
+          <p class="text-gray-500 text-sm mt-2">Nullam scelerisque blandit eros eu pretium.</p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="flex-1 p-6 text-center border-t md:border-t-0 md:border-l border-gray-200">
+          <div class="flex justify-center mb-4">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+              <img src="./img/Vector2.png" alt="">
+            </div>
+          </div>
+          <h3 class="font-semibold text-gray-800">Mortgage Services</h3>
+          <p class="text-gray-500 text-sm mt-2">Nullam scelerisque blandit eros eu pretium.</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="flex-1 p-6 text-center border-t md:border-t-0 md:border-l border-gray-200">
+          <div class="flex justify-center mb-4">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+              <img src="./img/vector3.png" alt="">
+            </div>
+          </div>
+          <h3 class="font-semibold text-gray-800">Currency Services</h3>
+          <p class="text-gray-500 text-sm mt-2">Nullam scelerisque blandit eros eu pretium.</p>
+        </div>
+  
+      </div>
+   
+
+
+ 
+</section>
+
+<!-- map section  -->
+<section>
+  <div class="flex flex-col xl:flex-row justify-center items-center px-6 md:px-10 py-16 md:py-20 gap-10 xl:gap-0">
+    
+    <!-- Left Side (Text + Button) -->
+    <div class="flex flex-col justify-center items-center xl:items-start text-center xl:text-left xl:pb-0 pb-6 xl:px-32 px-4">
+      <h1 class="text-black text-4xl md:text-5xl xl:text-2xl font-semibold">Explore Cities</h1>
+      <p class="text-black text-base md:text-lg xl:text-xs pt-4 xl:pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Suspendisse varius enim in eros elementum tristique.</p>
+      <div class="pt-6">
+        <button class="border border-black bg-transparent px-6 py-2 rounded-lg">
+          Learn More 
+          <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Side (Maps) -->
+    <div class="flex flex-col md:flex-row  justify-center items-center gap-8 md:gap-6 lg:gap-10">
+      
+      <!-- City 1 -->
+      <div class="flex flex-col items-center">
+        <iframe class="w-80 h-60 md:w-48 md:h-48 lg:w-52 lg:h-52" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=52.70967533219885, -8.020019531250002&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no"></iframe>
+        <h3 class="text-black text-lg mt-2">New York</h3>
+        <p class="text-black text-xs">10 Properties</p>
+      </div>
+
+      <!-- City 2 -->
+      <div class="flex flex-col items-center">
+        <iframe class="w-80 h-60 md:w-48 md:h-48 lg:w-52 lg:h-52" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=52.70967533219885, -8.020019531250002&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no"></iframe>
+        <h3 class="text-black text-lg mt-2">Chicago</h3>
+        <p class="text-black text-xs">1 Property</p>
+      </div>
+
+      <!-- City 3 -->
+      <div class="flex flex-col items-center">
+        <iframe class="w-80 h-60 md:w-48 md:h-48 lg:w-52 lg:h-52" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=52.70967533219885, -8.020019531250002&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no"></iframe>
+        <h3 class="text-black text-lg mt-2">San Diego</h3>
+        <p class="text-black text-xs">1 Property</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- relator can help  -->
+<section>
+  <div class="pt-14">
+    <h1 class="text-3xl text-black text-center py-3">See how Realtor can help</h1>
+    <p class="text-sm text-black text-center pb-10">Aliquam lacinia diam quis lacus euismod</p>
+  </div>
+  <div class="flex lg:flex-row flex-col justify-center items-center gap-8 px-6 py-10">
+    <!-- card1  -->
+    <div class="xl:w-1/4 lg:w-1/3 w-full flex flex-col justify-center items-center px-4 py-4 lg:shadow-none shadow-md">
+      <div><img src="./img/buy.png" alt=""></div>
+      <h1 class="text-lg text-black font-semibold text center leading-7 py-3">Buy a property</h1>
+      <p class="text-xs text-black  text-center">Nullam sollicitudin blandit eros eu pretium.
+        Nullam maximus ultricies auctor.</p>
+        <div class="py-4"><button class="px-6 py-3 bg:transparent hover:bg-black text-black hover:text-white border border-black rounded-lg">Find a home  <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i></button></div>
+    </div>
+    <!-- card2  -->
+    <div class="xl:w-1/4 lg:w-1/3 w-full flex flex-col justify-center items-center px-4 py-4 rounded-sm bg-[#fffbfb] shadow-md">
+      <div><img src="./img/buy.png" alt=""></div>
+      <h1 class="text-lg text-black font-semibold text center leading-7 py-3">Buy a property</h1>
+      <p class="text-xs text-black  text-center">Nullam sollicitudin blandit eros eu pretium.
+        Nullam maximus ultricies auctor.</p>
+        <div class="py-4"><button class="px-6 py-3 bg:transparent hover:bg-black text-black hover:text-white border border-black rounded-lg">Find a home  <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i></button></div>
+    </div>
+    <!-- card3  -->
+    <div class="xl:w-1/4 lg:w-1/3 w-full flex flex-col justify-center items-center px-4 py-4 lg:shadow-none shadow-md">
+      <div><img src="./img/buy.png" alt=""></div>
+      <h1 class="text-lg text-black font-semibold text center leading-7 py-3">Buy a property</h1>
+      <p class="text-xs text-black  text-center">Nullam sollicitudin blandit eros eu pretium.
+        Nullam maximus ultricies auctor.</p>
+        <div class="py-4"><button class="px-6 py-3 bg:transparent hover:bg-black text-black hover:text-white border border-black rounded-lg">Find a home  <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i></button></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Comfortable Villa Green  -->
+<section class="bg-[#FFF7F5]">
+  <div class="flex flex-col lg:flex-row  m items-center gap-10">
+
+    <!-- Image Part -->
+    <div class="w-full lg:w-1/2">
+      <img src="./img/villa.png" alt="Villa" class="w-full h-auto object-cover rounded-lg">
+    </div>
+
+    <!-- Text Content -->
+    <div class="w-full lg:w-1/2 flex flex-col gap-4 px-6">
+      <!-- Tags -->
+      <div class="flex gap-2">
+        <span class="bg-red-500 hover:bg-transparent hover:border hover:border-red-500 text-white hover:text-black text-xs font-semibold px-5 py-3 rounded-full">FEATURED</span>
+        <span class="bg-blue-900 hover:bg-transparent hover:border hover:border-blue-900 text-white hover:text-black text-xs font-semibold px-5 py-3 rounded-full">FOR SALE</span>
+      </div>
+
+      <!-- Title -->
+      <h2 class="text-2xl md:text-3xl font-semibold text-black">Comfortable Villa Green</h2>
+      <p class="text-sm text-gray-500">(79 Broklyn, Brooklyn)</p>
+
+      <!-- Features -->
+      <div class="flex flex-wrap gap-4 pt-2">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bed text-black"></i>
+          <span class="text-sm font-medium text-gray-700">9 Beds</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bath text-black"></i>
+          <span class="text-sm font-medium text-gray-700">3 Baths</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-ruler-combined text-black"></i>
+          <span class="text-sm font-medium text-gray-700">600 sqft</span>
+        </div>
+      </div>
+
+      <!-- Contacts -->
+      <div class="flex flex-wrap gap-6 pt-4">
+        <div>
+          <p class="text-sm text-black">Toll Free Customer Care</p>
+          <p class="font-medium text-black">03114987137</p>
+        </div>
+        <div>
+          <p class="text-sm text-black">Live Support</p>
+          <p class="font-medium text-black">safimughal.com@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="pt-4">
+        <p class="text-2xl font-semibold text-black">$5,800</p>
+      </div>
+
+      <!-- Slider Line (Fake Progress) -->
+      <div class="pt-4">
+        <div class="relative w-full h-1 bg-gray-300 rounded-full">
+          <div class="absolute top-0 left-0 h-1 bg-black rounded-full" style="width: 70%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-black mt-2">
+          <span>1</span>
+          <span>4</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- our exclusive agent  -->
+<section class="px-10">
+  <div class="flex flex-col xl:flex-row justify-center items-center px-6 md:px-10 py-16 md:py-20 gap-10 xl:gap-0">
+    
+    <!-- Left Side (Text + Button) -->
+    <div class="flex flex-col justify-center items-center xl:items-start text-center xl:text-left xl:pb-0 pb-6 xl:px-32 px-4">
+      <h1 class="text-black text-4xl md:text-5xl xl:text-2xl font-semibold">Explore Cities</h1>
+      <p class="text-black text-base md:text-lg xl:text-xs pt-4 xl:pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Suspendisse varius enim in eros elementum tristique.</p>
+      <div class="pt-6">
+        <button class="border border-black bg-transparent px-6 py-2 rounded-lg">
+          Learn More 
+          <i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Side (Maps) -->
+    <div class="flex flex-col md:flex-row  justify-center items-center gap-8 md:gap-6 lg:gap-10">
+      
+      <!-- City 1 -->
+      <div class="flex flex-col items-center">
+       <img src="./img/agent1.png" alt="">
+        <h3 class="text-black text-lg mt-2">New York</h3>
+        <p class="text-black text-xs">10 Properties</p>
+      </div>
+
+      <!-- City 2 -->
+      <div class="flex flex-col items-center">
+       <img src="./img/agent2.png" alt="">
+        <h3 class="text-black text-lg mt-2">Chicago</h3>
+        <p class="text-black text-xs">1 Property</p>
+      </div>
+
+      <!-- City 3 -->
+      <div class="flex flex-col items-center">
+       <img src="./img/agent3.png" alt="">
+        <h3 class="text-black text-lg mt-2">San Diego</h3>
+        <p class="text-black text-xs">1 Property</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- our blog  -->
+<section class="py-10 px-10">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center px-4 py-6 md:px-10">
+    <div>
+      <h1 class="text-black text-2xl md:text-3xl font-semibold">From Our Blog</h1>
+      <p class="text-[#717171] text-sm">Aliquam lacinia diam quis lacus euismod</p>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <p class="text-black text-sm md:text-base">See More Blogs 
+        <span><i class="fa-solid fa-arrow-right -rotate-45 text-xl inline-block ml-1"></i></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10 mt-6 2xl:w-[1600px] 2xl:auto py-6">
+    <!-- blog card 1 -->
+    <div>
+      <div><img src="./img/blog1.png" class="w-full object-cover" alt=""></div>
+      <p class="text-xs text-[#717171] mt-2">Townhome</p>
+      <h3 class="text-black font-semibold pt-1">Unveils the Best Canadian Cities for Biking and Walk</h3>
+    </div>
+
+    <!-- blog card 2 -->
+    <div>
+      <div><img src="./img/blog2.png" class="w-full object-cover" alt=""></div>
+      <p class="text-xs text-[#717171] mt-2">Townhome</p>
+      <h3 class="text-black font-semibold pt-1">Unveils the Best Canadian Cities for Biking and Walk</h3>
+    </div>
+
+    <!-- blog card 3 -->
+    <div>
+      <div><img src="./img/blog3.png" class="w-full object-cover" alt=""></div>
+      <p class="text-xs text-[#717171] mt-2">Townhome</p>
+      <h3 class="text-black font-semibold pt-1">Unveils the Best Canadian Cities for Biking and Walk</h3>
+    </div>
+  </div>
+</section>
+
+<!-- last section  -->
+<section class="relative bg-cover " style="background-image: url(./img/herobg.png);">
+  <!-- Blur Overlay -->
+  <div class="absolute inset-0 backdrop-blur-lg  z-0"></div>
+
+  <!-- Contact Form Overlay -->
+  <div class="relative z-10 flex justify-center items-center px-4 py-10">
+    <div class="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-xl w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl transition-all duration-300">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-black mb-1">Get In Touch</h2>
+      <p class="text-sm text-gray-500 mb-6">Aliquam lacinia diam quis lacus euismod</p>
+      <form class="space-y-4 sm:space-y-6">
+        <!-- Name Fields -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+            <input type="text" id="firstName" placeholder="Ali" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+          </div>
+          <div>
+            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+            <input type="text" id="lastName" placeholder="Tufan" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" placeholder="example.com" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea id="message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div>
+          <button type="submit" class="bg-black text-white w-full py-2 rounded hover:bg-gray-800 transition">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div> 
+</section>
+
+
+
+ 
+ 
+
+
+
+
+
+ <footer class="bg-[#0E0E0E] text-white py-10 px-4 md:px-10 ">
+   <!-- Logo and Social -->
+    <div class="flex justify-between  items-baseline w-full">
+      <div class=" w-1/2 flex justify-">
+        <img src="./img/logof.png"  alt="Homez logo" class="h-10">
+      </div>
+      <div class="flex justify-end  space-x-4 mb-4 items-center w-1/2">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-10 pt-9">
+    
+
+    <!-- Popular Search -->
+    <div class="md:text-start text-center">
+      <h4 class="text-white font-semibold mb-3">Popular Search</h4>
+      <ul class="text-[#bfbfbf] text-sm space-y-2">
+        <li><a href="#">Apartment for Sale</a></li>
+        <li><a href="#">Apartment for Rent</a></li>
+        <li><a href="#">Offices for Sale</a></li>
+        <li><a href="#">Offices for Rent</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="md:text-start text-center">
+      <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+      <ul class="text-[#bfbfbf] text-sm space-y-2">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Pricing Plans</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Discovery & Contact -->
+     <div class="md:text-start text-center" ><h4 class="text-white font-semibold mb-3">Discovery</h4>
+      <ul class="text-[#bfbfbf] text-sm space-y-2 mb-4">
+        <li><a href="#">Chicago</a></li>
+        <li><a href="#">Los Angeles</a></li>
+        <li><a href="#">New Jersey</a></li>
+        <li><a href="#">New York</a></li>
+        <li><a href="#">California</a></li>
+      </ul></div>
+    <div class="md:text-start text-center">
+      <p class="text-white text-sm font-semibold">Toll Free Customer Care</p>
+      <p class="text-[#bfbfbf] text-sm mb-2">(+01) 123 456 7890</p>
+      <p class="text-white text-sm font-semibold">Need Support?</p>
+      <p class="text-[#bfbfbf] text-sm mb-4">help@homez.com</p>
+
+      <div class="flex">
+        <input type="email" placeholder="Your email" class="p-2 rounded-l bg-white text-black text-sm w-full">
+        <button class="bg-white text-black px-4 text-sm rounded-r">Subscribe</button>
+      </div>
+
+      <div class="flex justify-center items-center space-x-4 lg:w-1/2 w-full py-3 px-2 rounded-lg mt-4 bg-[#575656]">
+        <img src="./img/apple.png" alt="App Store" class="h-10">
+ <h1>Apple Store</h1>
+      </div>
+      <div class="flex justify-center items-center space-x-2 lg:w-1/2 w-full py-3 px-2 rounded-lg mt-4 bg-[#575656]">
+        <img src="./img/Symbol.png" alt="App Store" class="h-10">
+ <h1>Goggle Play</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-[#bfbfbf] text-xs mt-6 px-4 md:px-10">
+    <p class="mb-2 md:mb-0">© Homez - All rights reserved</p>
+    <div class="flex space-x-4">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- navbar script  -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- hero section form script  -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const minPrice = document.getElementById("minPrice");
+    const maxPrice = document.getElementById("maxPrice");
+
+    const updateForm = (tab) => {
+      // Reset active styles
+      tabButtons.forEach(btn => {
+        btn.classList.remove("bg-gray-900", "text-white");
+        btn.classList.add("text-gray-700", "hover:bg-gray-100");
+      });
+
+      // Set active tab
+      const activeBtn = document.querySelector(`[data-tab="${tab}"]`);
+      activeBtn.classList.remove("text-gray-700", "hover:bg-gray-100");
+      activeBtn.classList.add("bg-gray-900", "text-white");
+
+      // Update price placeholders based on tab
+      if (tab === "sale") {
+        minPrice.placeholder = "$10,000";
+        maxPrice.placeholder = "$1,000,000";
+      } else if (tab === "rent") {
+        minPrice.placeholder = "$500/mo";
+        maxPrice.placeholder = "$5,000/mo";
+      } else {
+        minPrice.placeholder = "$0";
+        maxPrice.placeholder = "$5000";
+      }
+    };
+
+    // Add event listeners to tabs
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const tab = button.getAttribute("data-tab");
+        updateForm(tab);
+      });
+    });
+
+    // Set default tab
+    updateForm("all");
+  </script>
+
+<!-- font Aweome kit   -->
+<script src="https://kit.fontawesome.com/844a407e82.js" crossorigin="anonymous"></script>
+
+
+ </body>
+</html>
