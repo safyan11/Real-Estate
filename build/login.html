@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
-  <link rel="icon" type="image/png" href="./img/logo.png" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="./img/logo.png" />
 </head>
-<body class="bg-gray-100 backdrop-blur-sm flex flex-col items-center justify-center bg-cover p-4 min-h-screen " style="background-image: url(./img/herobg.png);">
+<body class="bg-gray-100 backdrop-blur-sm flex flex-col items-center justify-center bg-cover p-4 min-h-screen relative" style="background-image: url(./img/herobg.png);">
 
-    <div class="md:text-5xl text-3xl font-bold lg:pt-10 pt-5 lg:pb-5 pb-4 text-white text-center drop-shadow-lg animate-fade-in-up">
-     <h1> "Secure Your Next Move — Login Now"</h1>
+    <div class="text-5xl font-bold py-10 text-white text-center drop-shadow-lg animate-fade-in-up">
+      "Secure Your Next Move — Login Now"
     </div>
   
-    <div class="bg-white/30 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-md border border-white/50">
+    <!-- Form Container -->
+    <div class="bg-white/30 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-md border border-white/50 z-10 relative">
       <h2 class="text-2xl font-bold mb-6 text-center">Enter the World of Exclusive Properties</h2>
       
-      <form action="#" method="POST" class="space-y-4">
-        
+      <form id="loginForm" class="space-y-4">
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
           <input type="email" id="email" name="email" required
@@ -31,10 +31,10 @@
         </div>
         
         <div class="flex justify-center">
-          <a href="index.html" type="submit"
+          <button type="submit"
             class="w-full bg-black hover:bg-transparent text-white hover:text-black hover:border hover:border-black font-semibold py-2 px-24 text-center rounded-xl transition duration-300">
             Login
-          </a>
+          </button>
         </div>
       </form>
       
@@ -44,7 +44,15 @@
       </p>
     </div>
   
-    <!-- Animation CSS -->
+    <!-- Popup Overlay -->
+    <div id="popup" class="fixed inset-0 bg-black/40 backdrop-blur-md flex items-center justify-center z-50 hidden">
+      <div class="bg-white p-6 rounded-2xl shadow-xl text-center animate-fade-in-up w-80">
+        <h2 class="text-xl font-bold mb-2">Login Successful!</h2>
+        <p class="text-gray-600">Redirecting to main page...</p>
+      </div>
+    </div>
+  
+    <!-- Animation CSS text -->
     <style>
       @keyframes fadeInUp {
         0% {
@@ -57,9 +65,24 @@
         }
       }
       .animate-fade-in-up {
-        animation: fadeInUp 1s ease-out forwards;
+        animation: fadeInUp 0.6s ease-out forwards;
       }
     </style>
+  
+    <!-- Script -->
+    <script>
+      const loginForm = document.getElementById('loginForm');
+      const popup = document.getElementById('popup');
+  
+      loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        popup.classList.remove('hidden');
+  
+        setTimeout(function () {
+          window.location.href = 'index.html';
+        }, 3000);
+      });
+    </script>
   
   </body>
   
