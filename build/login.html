@@ -71,6 +71,9 @@
   
     <!-- Script -->
     <script>
+      if (!sessionStorage.getItem('registered')) {
+        window.location.href = 'register.html';
+      }
       const loginForm = document.getElementById('loginForm');
       const popup = document.getElementById('popup');
   
@@ -79,6 +82,7 @@
         popup.classList.remove('hidden');
   
         setTimeout(function () {
+          sessionStorage.setItem('loggedIn', 'true');
           window.location.href = 'index.html';
         }, 3000);
       });
