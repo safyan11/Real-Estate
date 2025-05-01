@@ -23,7 +23,7 @@
           </div>
   
           <!-- Toggle Button for Mobile -->
-          <div class="md:hidden">
+          <div class="lg:hidden">
             <button id="menu-toggle" class="text-gray-800 focus:outline-none">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -33,9 +33,9 @@
           </div>
   
           <!-- Nav Menu -->
-          <div class="hidden md:flex items-center justify-between w-[80%] ">
+          <div class="hidden lg:flex items-center justify-between w-[80%] ">
             <!-- Nav Items -->
-            <div class="flex items-center xl:space-x-20 lg:space-x-10 space-x-2">
+            <div class="flex items-center xl:space-x-20 lg:space-x-5 space-x-2">
               <a href="#home" class="lg:text-sm text-xs  font-medium text-gray-700  hover:text-blue-600  hover:bg-blue-100 rounded-full px-3 py-1">Home</a>
               <div class="relative group">
                 <a href="#Listings" class="lg:text-sm text-xs text-gray-700  hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full font-medium flex items-center gap-1">Listings
@@ -69,8 +69,8 @@
   
             <!-- Right Buttons -->
             <div class="flex items-center space-x-4 ml-4">
-              <a href="#" class="lg:text-sm text-xs text-black hover:text-blue-600">Login / Register</a>
-              <a href="#" class="border border-gray-800 rounded-full lg:px-4 px-5 py-1 lg:text-sm text-xs font-medium hover:bg-gray-800 hover:text-white transition-all">
+              <a href="register.html" class="lg:text-sm text-xs text-black hover:text-blue-600">Login / Register</a>
+              <a href="#Contact" class="border border-gray-800 rounded-full lg:px-4 px-5 py-1 lg:text-sm text-xs font-medium hover:bg-gray-800 hover:text-white transition-all">
                 Add Property
               </a>
             </div>
@@ -79,14 +79,14 @@
       </div>
   
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4 space-y-2">
         <a href="#home" class="block text-sm font-medium text-gray-700 hover:text-blue-600  hover:bg-blue-100 rounded px-3 py-1">Home</a>
         <a href="#Listings" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full ">Listings</a>
-        <a href="#" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Members</a>
-        <a href="#Members" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Blog</a>
-        <a href="#Blog" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Pages</a>
-        <a href="#Pages" class="block text-sm text-gray-600 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Login / Register</a>
-        <a href="#" class="block text-center border border-gray-800 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-800 hover:text-white transition">
+        <a href="#Members" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Members</a>
+        <a href="#Blog" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Blog</a>
+        <a href="#Pages" class="block text-sm text-gray-700 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Pages</a>
+        <a href="register.html" class="block text-sm text-gray-600 hover:text-blue-600  hover:bg-blue-100 px-3 py-1 rounded-full">Login / Register</a>
+        <a href="#Contact" class="block text-center border border-gray-800 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-800 hover:text-white transition">
           Add Property
         </a>
       </div>
@@ -614,7 +614,7 @@
 </section>
 
 <!-- last section  -->
-<section class="relative bg-cover " style="background-image: url(./img/herobg.png);">
+<section id="Contact" class="relative bg-cover " style="background-image: url(./img/herobg.png);">
   <!-- Blur Overlay -->
   <div class="absolute inset-0 backdrop-blur-lg  z-0"></div>
 
